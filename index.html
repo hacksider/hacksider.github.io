@@ -1,14 +1,281 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<style>
-body {
-  background-image: url('ken.jpg');
-}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kenneth Estanislao - Solutions Architect & Project Manager</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Montserrat:wght@400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Roboto', sans-serif;
+            color: #2d3748;
+            line-height: 1.6;
+            background-color: #f7fafc;
+        }
+        
+        h1, h2, h3, h4 {
+            font-family: 'Montserrat', sans-serif;
+        }
+        
+        .page-container {
+            max-width: 210mm;
+            margin: 0 auto;
+            background: white;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 2rem;
+        }
+        
+        .section {
+            margin-bottom: 1.5rem;
+            page-break-inside: avoid;
+        }
+        
+        .timeline-item {
+            border-left: 2px solid #3182ce;
+            padding-left: 1.5rem;
+            position: relative;
+            margin-bottom: 1.5rem;
+        }
+        
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #3182ce;
+            left: -7px;
+            top: 6px;
+        }
+        
+        .skill-tag {
+            display: inline-block;
+            background: #ebf4ff;
+            color: #2c5282;
+            border-radius: 4px;
+            padding: 0.25rem 0.75rem;
+            margin: 0.25rem;
+            font-size: 0.875rem;
+        }
+        
+        .achievement {
+            position: relative;
+            padding-left: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .achievement::before {
+            content: '•';
+            position: absolute;
+            left: 0.5rem;
+            color: #3182ce;
+            font-weight: bold;
+        }
+        
+        .header-line {
+            height: 4px;
+            background: linear-gradient(90deg, #3182ce 0%, #63b3ed 100%);
+            margin: 0.5rem 0 1.5rem 0;
+        }
+        
+        @media print {
+            body {
+                background: white;
+            }
+            
+            .page-container {
+                box-shadow: none;
+                padding: 0;
+            }
+        }
+    </style>
 </head>
-<body>
+<body class="py-8">
+    <div class="page-container">
+        <!-- Header Section -->
+        <header class="section">
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-center">
+                <div>
+                    <h1 class="text-4xl font-bold text-blue-700">Kenneth Estanislao</h1>
+                    <h2 class="text-xl text-gray-600 mt-1">Solutions Architect / Project Manager</h2>
+                </div>
+                <div class="mt-3 md:mt-0 text-gray-600 text-right">
+                    <p><i class="fas fa-phone mr-2"></i>(+63) 9088905585</p>
+                    <p><i class="fas fa-envelope mr-2"></i>kenneth.estanislao@gmail.com</p>
+                    <p><i class="fas fa-map-marker-alt mr-2"></i>Cainta, Rizal, Philippines</p>
+                </div>
+            </div>
+            <div class="header-line"></div>
+            <div class="flex flex-wrap justify-between items-center text-gray-700">
+                <div class="w-full md:w-auto mb-2 md:mb-0"><i class="fas fa-briefcase mr-2"></i><strong>Experience:</strong> 20+ years</div>
+                <div class="w-full md:w-auto mb-2 md:mb-0"><i class="fas fa-graduation-cap mr-2"></i><strong>Education:</strong> BS Computer Science</div>
+                <div class="w-full md:w-auto"><i class="fas fa-globe mr-2"></i><strong>Language:</strong> English (Advanced)</div>
+            </div>
+        </header>
+        
+        <!-- Professional Summary -->
+        <section class="section">
+            <h2 class="text-2xl font-semibold text-blue-700 border-b border-gray-300 pb-1 mb-3">Professional Summary</h2>
+            <p class="mb-4">
+                Results-driven Solutions Architect and Project Manager with over 20 years of experience in designing, implementing, and optimizing enterprise-level solutions. Proven track record of increasing performance, reducing costs, and introducing innovative technologies like AI and machine learning. Skilled in managing technical teams and creating roadmaps for digital transformation.
+            </p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
+                <div>
+                    <h3 class="text-lg font-medium text-blue-700 mb-2">Key Achievements</h3>
+                    <ul class="pl-1">
+                        <li class="achievement">Optimized client app performance by 300%</li>
+                        <li class="achievement">Reduced file server infrastructure costs by 90%</li>
+                        <li class="achievement">Introduced 10+ AI and machine learning products</li>
+                        <li class="achievement">Increased site speed by 500% and profits by 150%</li>
+                        <li class="achievement">Managed teams of up to 20+ developers across platforms</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-medium text-blue-700 mb-2">Core Competencies</h3>
+                    <ul class="pl-1">
+                        <li class="achievement">Enterprise & Solutions Architecture</li>
+                        <li class="achievement">Cloud Infrastructure (AWS, Azure, GCP)</li>
+                        <li class="achievement">Software Development & Optimization</li>
+                        <li class="achievement">Data Modeling & Analysis</li>
+                        <li class="achievement">Team Leadership & Project Management</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Technical Skills -->
+        <section class="section">
+            <h2 class="text-2xl font-semibold text-blue-700 border-b border-gray-300 pb-1 mb-3">Technical Skills</h2>
+            <div class="flex flex-wrap">
+                <div class="skill-tag"><i class="fas fa-cloud mr-1"></i>AWS</div>
+                <div class="skill-tag"><i class="fas fa-cloud mr-1"></i>Azure</div>
+                <div class="skill-tag"><i class="fas fa-cloud mr-1"></i>Google Cloud</div>
+                <div class="skill-tag"><i class="fas fa-code mr-1"></i>Python</div>
+                <div class="skill-tag"><i class="fas fa-code mr-1"></i>NodeJS</div>
+                <div class="skill-tag"><i class="fas fa-code mr-1"></i>PHP</div>
+                <div class="skill-tag"><i class="fas fa-brain mr-1"></i>Machine Learning</div>
+                <div class="skill-tag"><i class="fas fa-database mr-1"></i>PostgreSQL</div>
+                <div class="skill-tag"><i class="fas fa-database mr-1"></i>MySQL</div>
+                <div class="skill-tag"><i class="fas fa-database mr-1"></i>Oracle</div>
+                <div class="skill-tag"><i class="fas fa-database mr-1"></i>MSSQL</div>
+                <div class="skill-tag"><i class="fas fa-sitemap mr-1"></i>Solutions Architecture</div>
+                <div class="skill-tag"><i class="fas fa-sitemap mr-1"></i>Software Architecture</div>
+                <div class="skill-tag"><i class="fas fa-sitemap mr-1"></i>Enterprise Architecture</div>
+                <div class="skill-tag"><i class="fas fa-chart-bar mr-1"></i>Data Analysis</div>
+                <div class="skill-tag"><i class="fas fa-chart-line mr-1"></i>Data Modeling</div>
+                <div class="skill-tag"><i class="fas fa-tasks mr-1"></i>Project Management</div>
+                <div class="skill-tag"><i class="fas fa-sync-alt mr-1"></i>Agile</div>
+            </div>
+        </section>
+        
+        <!-- Professional Experience -->
+        <section class="section">
+            <h2 class="text-2xl font-semibold text-blue-700 border-b border-gray-300 pb-1 mb-4">Professional Experience</h2>
+            
+            <!-- Sunlife -->
+            <div class="timeline-item">
+                <div class="flex flex-col md:flex-row justify-between">
+                    <h3 class="text-xl font-semibold">Solutions Architect</h3>
+                    <p class="font-medium text-gray-600">Nov 2018 – Present</p>
+                </div>
+                <p class="text-blue-600 italic mb-2">Sunlife Financial | National Capital Region, Philippines</p>
+                <ul class="pl-1 mt-2">
+                    <li class="achievement">Optimized client application loading speed by 300%</li>
+                    <li class="achievement">Reduced file server infrastructure costs by 90%</li>
+                    <li class="achievement">Introduced AI and machine learning applications across the organization</li>
+                    <li class="achievement">Created multiple services that became part of the common API</li>
+                    <li class="achievement">Developed and implemented 10+ innovative products including generative AI solutions</li>
+                </ul>
+            </div>
+            
+            <!-- Outsourced.ph -->
+            <div class="timeline-item">
+                <div class="flex flex-col md:flex-row justify-between">
+                    <h3 class="text-xl font-semibold">Solutions Architect / Project Manager</h3>
+                    <p class="font-medium text-gray-600">Apr 2014 – Oct 2018</p>
+                </div>
+                <p class="text-blue-600 italic mb-2">Outsourced.ph | National Capital Region, Philippines</p>
+                <ul class="pl-1 mt-2">
+                    <li class="achievement">Created the Noteabout Social Network platform from the ground up</li>
+                    <li class="achievement">Implemented server applications and infrastructure optimization</li>
+                    <li class="achievement">Designed software architecture for iOS, Web, and Android applications</li>
+                    <li class="achievement">Managed distributed server infrastructure across multiple data centers</li>
+                    <li class="achievement">Led a team of 20+ developers across iOS, Web, and Android platforms</li>
+                </ul>
+            </div>
+            
+            <!-- 24/7 International - UNILAB -->
+            <div class="timeline-item">
+                <div class="flex flex-col md:flex-row justify-between">
+                    <h3 class="text-xl font-semibold">Solutions Architect</h3>
+                    <p class="font-medium text-gray-600">Jun 2012 – Present (concurrent)</p>
+                </div>
+                <p class="text-blue-600 italic mb-2">24/7 International - UNILAB</p>
+                <ul class="pl-1 mt-2">
+                    <li class="achievement">Led team of 7 developers in eCommerce development initiatives</li>
+                    <li class="achievement">Pioneered open source development at UNILAB</li>
+                    <li class="achievement">Built enterprise-level eCommerce platforms for both internal and external use</li>
+                    <li class="achievement">Managed LAMP stack server administration</li>
+                    <li class="achievement">Developed all UNILAB websites</li>
+                </ul>
+            </div>
+            
+            <!-- Moonline Corp -->
+            <div class="timeline-item">
+                <div class="flex flex-col md:flex-row justify-between">
+                    <h3 class="text-xl font-semibold">Solutions Architect / Project Manager</h3>
+                    <p class="font-medium text-gray-600">Sep 2011 – Jun 2012</p>
+                </div>
+                <p class="text-blue-600 italic mb-2">Moonline Corp - Cashcashpinoy</p>
+                <ul class="pl-1 mt-2">
+                    <li class="achievement">Increased site speed by 500% through infrastructure optimization</li>
+                    <li class="achievement">Boosted company profits by more than 150% through technical improvements</li>
+                    <li class="achievement">Established foundational server and hardware infrastructure</li>
+                    <li class="achievement">Managed cloud computing, security, and email server operations</li>
+                    <li class="achievement">Executed data migration and optimization projects</li>
+                </ul>
+            </div>
+            
+            <!-- C&E Publishing -->
+            <div class="timeline-item">
+                <div class="flex flex-col md:flex-row justify-between">
+                    <h3 class="text-xl font-semibold">Solutions Architect</h3>
+                    <p class="font-medium text-gray-600">Jan 2009 – Sep 2011</p>
+                </div>
+                <p class="text-blue-600 italic mb-2">C&E Publishing</p>
+                <ul class="pl-1 mt-2">
+                    <li class="achievement">Developed corporate portal and managed external web servers</li>
+                    <li class="achievement">Created automated form builder system</li>
+                    <li class="achievement">Built multiple eCommerce sites: CEBookshop.com, Dolcelatte.ph</li>
+                    <li class="achievement">Developed educational platforms: CELearning.ph, MedResource.com.ph</li>
+                </ul>
+            </div>
+            
+            <!-- Previous Experience Summary -->
+            <div class="timeline-item">
+                <div class="flex flex-col md:flex-row justify-between">
+                    <h3 class="text-xl font-semibold">Earlier Career Progression</h3>
+                    <p class="font-medium text-gray-600">1999 – 2009</p>
+                </div>
+                <p class="text-blue-600 italic mb-2">Various Organizations</p>
+                <ul class="pl-1 mt-2">
+                    <li class="achievement"><strong>PHoutsource (2008-2009):</strong> Senior Web Developer/Project Manager - Developed 50+ websites, increased company productivity by 300%</li>
+                    <li class="achievement"><strong>Net2globe (2006-2008):</strong> Senior Web Developer - Created e-commerce and e-learning platforms</li>
+                    <li class="achievement"><strong>Netobjects (2002-2004):</strong> Template Designer - Created web templates using CSS/HTML/Flash</li>
+                    <li class="achievement"><strong>Freelance (1999-2004):</strong> Web Designer - Developed websites using ASP/HTML/CSS and Flash animation</li>
+                </ul>
+            </div>
+        </section>
 
-
+        
+        <!-- Footer Section -->
+        <footer class="mt-8 pt-4 border-t border-gray-300 text-center text-gray-600">
+            <p>This resume was professionally designed to highlight Kenneth Estanislao's 20+ years of experience in Solutions Architecture and Project Management.</p>
+        </footer>
+    </div>
 </body>
 </html>
