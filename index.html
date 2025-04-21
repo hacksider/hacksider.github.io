@@ -84,11 +84,30 @@
         @media print {
             body {
                 background: white;
+                margin: 0;
+                padding: 0;
+                font-size: 10pt; /* Adjust font size for print */
             }
             
             .page-container {
                 box-shadow: none;
-                padding: 0;
+                padding: 1cm; /* Add some padding for printing */
+                margin: 0;
+                max-width: none;
+                width: 100%;
+            }
+
+            .print-hidden {
+                display: none;
+            }
+            
+            h1 { font-size: 28pt; }
+            h2 { font-size: 16pt; }
+            h3 { font-size: 12pt; }
+
+             /* Ensure long URLs wrap */
+            a {
+                word-break: break-all;
             }
         }
     </style>
@@ -112,7 +131,13 @@
             <div class="flex flex-wrap justify-between items-center text-gray-700">
                 <div class="w-full md:w-auto mb-2 md:mb-0"><i class="fas fa-briefcase mr-2"></i><strong>Experience:</strong> 20+ years</div>
                 <div class="w-full md:w-auto mb-2 md:mb-0"><i class="fas fa-graduation-cap mr-2"></i><strong>Education:</strong> BS Computer Science</div>
-                <div class="w-full md:w-auto"><i class="fas fa-globe mr-2"></i><strong>Language:</strong> English (Advanced)</div>
+                <div class="w-full md:w-auto mb-2 md:mb-0"><i class="fas fa-globe mr-2"></i><strong>Language:</strong> English (Advanced)</div>
+                <!-- Print Button -->
+                 <div class="w-full md:w-auto mt-2 md:mt-0 print-hidden">
+                    <button onclick="window.print()" class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition duration-200">
+                        <i class="fas fa-print mr-2"></i>Print / Save as PDF
+                    </button>
+                </div>
             </div>
         </header>
         
@@ -275,11 +300,42 @@
             </div>
         </section>
 
+        <!-- Highlighted Project -->
+         <section class="section">
+             <h2 class="text-2xl font-semibold text-blue-700 border-b border-gray-300 pb-1 mb-3">Highlighted Open Source Project</h2>
+             <div class="mb-4">
+                 <h3 class="text-xl font-semibold text-blue-600">DeepLiveCam - Real-time AI Video Modification</h3>
+                 <p class="mt-1 text-gray-700">
+                     Creator and maintainer of DeepLiveCam, a highly acclaimed open-source project enabling real-time AI modification of video streams. This project showcases advanced skills in AI/ML implementation, Python development, and managing large-scale, community-driven software initiatives.
+                 </p>
+                 <ul class="pl-1 mt-2">
+                     <li class="achievement">Gained massive popularity, becoming one of GitHub's largest AI repositories with over 50,000 stars.</li>
+                     <li class="achievement">Achieved significant global visibility, trending on GitHub and featured in various tech communities.</li>
+                     <li class="achievement">Demonstrates practical application of cutting-edge AI techniques in a real-world, high-performance scenario.</li>
+                     <li class="achievement">
+                        <strong>Project Repository:</strong> 
+                        <a href="https://github.com/hacksider/Deep-Live-Cam" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline font-medium">github.com/hacksider/Deep-Live-Cam</a>
+                     </li>
+                     <!-- If there's a dedicated website besides GitHub, add it here -->
+                     <!-- 
+                     <li class="achievement">
+                        <strong>Project Website:</strong> 
+                        <a href="[Your DeepLiveCam Website URL]" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline font-medium">[Your DeepLiveCam Website URL]</a>
+                     </li> 
+                     -->
+                 </ul>
+             </div>
+         </section>
+
         
         <!-- Footer Section -->
-        <footer class="mt-8 pt-4 border-t border-gray-300 text-center text-gray-600">
+        <footer class="mt-8 pt-4 border-t border-gray-300 text-center text-gray-600 text-sm">
             <p>This resume was professionally designed to highlight Kenneth Estanislao's 20+ years of experience in Solutions Architecture, Project Management, and AI innovation.</p>
         </footer>
     </div>
+
+    <!-- Simple script for Print functionality -->
+    <!-- The window.print() function is now called directly from the button's onclick attribute -->
+
 </body>
 </html>
